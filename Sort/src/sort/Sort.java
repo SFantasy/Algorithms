@@ -6,7 +6,6 @@ package sort;
  */
 public class Sort {
     // Test array
-
     private static Integer[] array = {3, 2, 10, 5, 1, 9, 4, 3};
 
     public static void main(String[] args) {
@@ -18,9 +17,11 @@ public class Sort {
 
         System.out.println();
         System.out.println("The array after sorted is: ");
-        //result = test.selectionSort(array);
-        //test.bubbleSort();
+        //Sort.selectionSort();
+        //Sort.bubbleSort();
         Sort.quickSort();
+        //Sort.heapSort();
+        //Sort.mergeSort();
 
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + " ");
@@ -30,7 +31,6 @@ public class Sort {
     /*
      *   Selection Sort
      */
-
     public static void selectionSort() {
 
         for (int i = 0; i < array.length; i++) {
@@ -49,7 +49,6 @@ public class Sort {
     /*
      *   Bubble Sort
      */
-
     public static void bubbleSort() {
 
         for (int i = 0; i < array.length; i++) {
@@ -65,7 +64,6 @@ public class Sort {
     /*
      *   Quick Sort
      */
-
     public static void quickSort() {
         qsort(0, array.length - 1);
     }
@@ -102,10 +100,14 @@ public class Sort {
         array[j] = (Integer)x;
         return j;
     }
-
+    /*
+     *   Heap Sort
+     */
     public static void heapSort() {
     }
-
+    /*
+     *   Merge Sort
+     */
     public static void mergeSort() {
     }
 }
