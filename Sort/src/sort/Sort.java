@@ -1,61 +1,111 @@
 package sort;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author fantasy
  */
 public class Sort {
+    // Test array
+
+    private static Integer[] array = {3, 2, 10, 5, 1, 9, 4, 3};
 
     public static void main(String[] args) {
-        int[] array = {3, 2, 10, 5, 1, 9, 4, 3};
-        int choose = 0;
-        int[] result;
-        Sort test = new Sort();
+        
         System.out.println("The original array is: ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+
         System.out.println();
         System.out.println("The array after sorted is: ");
         //result = test.selectionSort(array);
-        result = test.bubbleSort(array);
-        for (int j = 0; j < result.length; j++) {
-            System.out.print(result[j] + " ");
+        //test.bubbleSort();
+        Sort.quickSort();
+
+        for (int j = 0; j < array.length; j++) {
+            System.out.print(array[j] + " ");
         }
         System.out.println();
     }
+    /*
+     *   Selection Sort
+     */
 
-    public int[] selectionSort(int[] array) {
-        int[] newArray = array;
-        for (int i = 0; i < newArray.length; i++) {
+    public static void selectionSort() {
+
+        for (int i = 0; i < array.length; i++) {
             int largest = i;
             int temp;
-            for (int j = i + 1; j < newArray.length; j++) {
-                if (newArray[j] > newArray[largest]) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] > array[largest]) {
                     largest = j;
                 }
             }
-            temp = newArray[i];
-            newArray[i] = newArray[largest];
-            newArray[largest] = temp;
+            temp = array[i];
+            array[i] = array[largest];
+            array[largest] = temp;
         }
-        return newArray;
     }
+    /*
+     *   Bubble Sort
+     */
 
-    public int[] bubbleSort(int[] array) {
-        int[] newArray = array;
-        for (int i = 0; i < newArray.length; i++) {
-            for (int j = i + 1; j < newArray.length; j++) {
-                if (newArray[i] < newArray[j]) {
-                    int temp = newArray[i];
-                    newArray[i] = newArray[j];
-                    newArray[j] = temp;
+    public static void bubbleSort() {
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }
             }
         }
-        return array;
+    }
+    /*
+     *   Quick Sort
+     */
+
+    public static void quickSort() {
+        qsort(0, array.length - 1);
+    }
+
+    public static void qsort(int p, int r) {
+        if (p < r) {
+            int q = partition(p, r);
+            qsort(p, q - 1);
+            qsort(q + 1, r);
+        }
+    }
+
+    public static int partition(int p, int r) {
+        int i = p,
+                j = r + 1;
+
+        Comparable x = array[p];
+
+        while (true) {
+            while (array[++i].compareTo((Integer) x) < 0) {
+                // empty
+            }
+            while (array[--j].compareTo((Integer) x) > 0) {
+                // empty
+            }
+            if (i >= j) {
+                break;
+            }
+            Integer temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        array[p] = array[j];
+        array[j] = (Integer)x;
+        return j;
+    }
+
+    public static void heapSort() {
+    }
+
+    public static void mergeSort() {
     }
 }
