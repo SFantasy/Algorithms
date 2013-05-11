@@ -10,6 +10,8 @@ public class Sort {
 
     public static void main(String[] args) {
         
+        Integer[] newArray = new Integer[array.length];
+        
         System.out.println("The original array is: ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
@@ -19,12 +21,16 @@ public class Sort {
         System.out.println("The array after sorted is: ");
         //Sort.selectionSort();
         //Sort.bubbleSort();
-        Sort.quickSort();
+        //Sort.quickSort();
         //Sort.heapSort();
-        //Sort.mergeSort();
+        System.arraycopy(Sort.mergeSort(array), 0, newArray, 0, array.length);
 
-        for (int j = 0; j < array.length; j++) {
-            System.out.print(array[j] + " ");
+//        for (int j = 0; j < array.length; j++) {
+//            System.out.print(array[j] + " ");
+//        }
+        // Output scope ofr Merge sort
+        for(int k = 0; k < newArray.length; k++) {
+            System.out.print(newArray[k] + " ");
         }
         System.out.println();
     }
@@ -104,12 +110,50 @@ public class Sort {
      *   Heap Sort
      */
     public static void heapSort() {
-        
     }
     /*
      *   Merge Sort
      */
-    public static void mergeSort() {
-        
+    public static Integer[] mergeSort(Integer[] arr) {
+        if(arr.length == 1) {
+            return arr;
+        }
+        int mid = arr.length / 2;
+        Integer[] left = new Integer[mid];
+        Integer[] right = new Integer[arr.length - mid];
+        System.arraycopy(arr, 0, left, 0, left.length);
+        System.arraycopy(arr, mid, right, 0, right.length);
+        left = mergeSort(left);
+        right = mergeSort(right);
+        return merge(left, right);
     }
+    
+    public static Integer[] merge(Integer[] l, Integer[] r) {
+        Integer[] result = new Integer[l.length + r.length];
+        int i = 0,
+                j = 0,
+                k = 0;
+        while(true) {
+            if(l[i] < r[j]) {
+                result[k] = l[i];
+                if(++i > l.length - 1) {
+                    break;
+                }
+            } else {
+                result[k] = r[j];
+                if(++j > r.length - 1) {
+                    break;
+                }
+            }
+            k++;
+        }
+        for(;i < l.length; i++) {
+            result[++k] = l[i];
+        }
+        for(;j < r.length; j++) {
+            result[++k] = r[j];
+        }
+        return result;
+    }
+    
 }
