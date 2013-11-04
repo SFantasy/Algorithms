@@ -6,25 +6,21 @@ package leetcode;
  */
 public class Solution {
     public int lengthOfLongestSubstring(String s) {        
-        ArrayList<Character> origin = new ArrayList<Character>();
+        Hashtable<Character, Integer> t = new Hashtable<Character, Integer>();
+        int longest = 0;
         for(int i = 0; i < s.length(); i++) {
-            origin.add(s.charAt(i));
-        }
-        
-        ArrayList<Character> temp = new ArrayList<Character>();
-        ArrayList<Character> longest = new ArrayList<Character>();
-        for(int j = 0; j < origin.size(); j++) {
-            if(!temp.contains(origin.get(j))) {
-                temp.add(origin.get(j));
-                if(temp.size() > longest.size()) {
-                    longest = new ArrayList<Character>(temp);
+            for(int j = i; j < s.length(); j++) {
+                if(t.containsKey(s.charAt(j))) {
+                    longest = t.size() > longest ? t.size() : longest;
+                    t.clear();
+                    break;
+                } else {
+                    t.put(s.charAt(j), 1);
+                    longest = t.size() > longest ? t.size() : longest;
                 }
-            } else {
-                temp.clear();
-                temp.add(origin.get(j));
             }
         }
         
-        return longest.size();
+        return longest;
     }
 }
