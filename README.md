@@ -1,7 +1,7 @@
 Algorithms
 ==========
 
-* Sort 
+## Sort 
 	- Selection sort
 	- Bubble sort
 	- Quick sort
