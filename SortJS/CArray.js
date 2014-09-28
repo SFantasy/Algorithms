@@ -5,7 +5,7 @@
  * @credit p145 on Data Structure and Algorithms with JavaScript
  * @description
  * @create 2014-09-21
- * @update 2014-09-26
+ * @update 2014-09-28
  */
 
 var CArray = function (numElements) {
@@ -28,7 +28,7 @@ CArray.prototype.toString = function () {
     var restr = '';
     for (var i = 0; i < this.dataStore.length; ++i) {
         restr += this.dataStore[i] + ' ';
-        if (i > 0 & i % 10 == 0) {
+        if (i > 0 & i % 10 === 0) {
             restr += '\n';
         }
     }
