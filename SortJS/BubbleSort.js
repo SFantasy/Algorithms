@@ -5,15 +5,11 @@
  * @description
  * @author Fantasy <fantasyshao@icloud.com>
  * @create 2014-09-21
- * @update 2014-09-28
+ * @update 2014-10-02
  */
 
 
-module.exports = function () {
-
-    var CArray = require('./CArray');
-    var arr = new CArray(10);
-    arr.setData();
+module.exports = function (arr) {
 
     var numElements = arr.dataStore.length;
 

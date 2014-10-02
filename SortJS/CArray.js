@@ -28,7 +28,7 @@ CArray.prototype.toString = function () {
     var restr = '';
     for (var i = 0; i < this.dataStore.length; ++i) {
         restr += this.dataStore[i] + ' ';
-        if (i > 0 & i % 10 === 0) {
+        if (i > 0 && i % 10 === 0) {
             restr += '\n';
         }
     }
@@ -42,7 +42,7 @@ CArray.prototype.clear = function () {
 
 CArray.prototype.setData = function () {
     for (var i = 0; i < this.numElements; ++i) {
-        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1));
+        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1) * 2);
     }
 };
 
