@@ -13,6 +13,9 @@ var arr = new CArray(10);
 arr.setData();
 
 // Require different sort methods
-var BubbleSort = require('./BubbleSort');
+//var BubbleSort = require('./BubbleSort');
+//console.log(BubbleSort(arr));
 
-console.log(BubbleSort(arr));
+var InsertionSort = require('./InsertionSort');
+
+console.log(InsertionSort(arr));
