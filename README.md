@@ -12,6 +12,7 @@ Keep learning :)
 - Quick sort
 - Heap sort
 - Merge sort
+- [SortJS](SortJS): Sort methods in JavaScript
 
 ### LeetCode
 
