@@ -42,7 +42,7 @@ CArray.prototype.clear = function () {
 
 CArray.prototype.setData = function () {
     for (var i = 0; i < this.numElements; ++i) {
-        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1) * 2);
+        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1) * 5);
     }
 };
 

@@ -11,12 +11,18 @@
 var CArray = require('./CArray');
 var arr = new CArray(20);
 // Require different sort methods
-// Bubble
-arr.setData();
-var BubbleSort = require('./BubbleSort');
-arr.cost(BubbleSort(arr));
 
 // Insertion
 arr.setData();
 var InsertionSort = require('./InsertionSort');
 arr.cost(InsertionSort(arr));
+
+// Selection
+arr.setData();
+var SelectionSort = require('./SelectionSort');
+arr.cost(SelectionSort(arr));
+
+// Bubble
+arr.setData();
+var BubbleSort = require('./BubbleSort');
+arr.cost(BubbleSort(arr));

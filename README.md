@@ -18,9 +18,20 @@ Keep learning :)
 #### Implemented in JavaScript: [SortJS](SortJS)
 
 - Simple sorts
-    - Insertion Sort
+    - [x] Insertion sort
+    - [x] Selection sort
+- Efficient sorts
+    - [ ] Merge sort
+    - [ ] Heap sort
+    - [ ] Quick sort
 - Bubble sort and variant
-    - Bubble Sort
+    - [x] Bubble sort
+    - [ ] Shell sort
+    - [ ] Comb sort
+- Distributed sort
+    - [ ] Counting sort
+    - [ ] Bucket sort
+    - [ ] Radix sort
 
 ### LeetCode
 
