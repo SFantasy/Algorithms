@@ -7,12 +7,20 @@ Keep learning :)
 
 ### Sort
 
+#### Implemented in Java: [Sort](Sort)
+
 - Selection sort
 - Bubble sort
 - Quick sort
 - Heap sort
 - Merge sort
-- [SortJS](SortJS): Sort methods in JavaScript
+
+#### Implemented in JavaScript: [SortJS](SortJS)
+
+- Simple sorts
+    - Insertion Sort
+- Bubble sort and variant
+    - Bubble Sort
 
 ### LeetCode
 
