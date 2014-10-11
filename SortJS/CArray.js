@@ -52,4 +52,12 @@ CArray.prototype.swap = function (arr, index1, index2) {
     arr[index2] = temp;
 };
 
+CArray.prototype.cost = function (fn) {
+  var startTime = new Date();
+
+  console.log(fn);
+
+  console.log('Time cost: ' + (new Date() - startTime) + 'ms\n');
+};
+
 module.exports = CArray;

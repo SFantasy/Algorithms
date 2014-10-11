@@ -11,6 +11,8 @@
 
 module.exports = function (arr) {
 
+    console.log('\nBubble sort...');
+
     var numElements = arr.dataStore.length;
 
     for (var i = numElements; i >= 2; --i) {

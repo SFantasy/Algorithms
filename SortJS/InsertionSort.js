@@ -10,7 +10,7 @@
 
 module.exports = function (arr) {
 
-  console.log('Insertion sort...');
+  console.log('\nInsertion sort...');
 
   var currentNum, o;
 

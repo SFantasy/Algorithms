@@ -9,13 +9,14 @@
  */
 
 var CArray = require('./CArray');
-var arr = new CArray(10);
-arr.setData();
-
+var arr = new CArray(20);
 // Require different sort methods
-//var BubbleSort = require('./BubbleSort');
-//console.log(BubbleSort(arr));
+// Bubble
+arr.setData();
+var BubbleSort = require('./BubbleSort');
+arr.cost(BubbleSort(arr));
 
+// Insertion
+arr.setData();
 var InsertionSort = require('./InsertionSort');
-
-console.log(InsertionSort(arr));
+arr.cost(InsertionSort(arr));
