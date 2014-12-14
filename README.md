@@ -26,7 +26,7 @@ Keep learning :)
     - [ ] Quick sort
 - Bubble sort and variant
     - [x] Bubble sort
-    - [ ] Shell sort
+    - [X] Shell sort
     - [ ] Comb sort
 - Distributed sort
     - [ ] Counting sort
