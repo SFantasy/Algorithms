@@ -5,13 +5,14 @@
  * @description
  * @author Fantasy <fantasyshao@icloud.com>
  * @create 2014-09-21
- * @update 2014-10-02
+ * @update 2014-12-14
  */
 
 var CArray = require('./CArray');
-var arr = new CArray(20);
-// Require different sort methods
+var arr = new CArray(1000);
 
+// Require different sort methods
+// -------------------------------
 // Insertion
 arr.setData();
 var InsertionSort = require('./InsertionSort');
@@ -26,3 +27,8 @@ arr.cost(SelectionSort(arr));
 arr.setData();
 var BubbleSort = require('./BubbleSort');
 arr.cost(BubbleSort(arr));
+
+// Shell
+arr.setData();
+var ShellSort = require('./ShellSort');
+arr.cost(ShellSort(arr));

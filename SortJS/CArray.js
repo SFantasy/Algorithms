@@ -5,7 +5,7 @@
  * @credit p145 on Data Structure and Algorithms with JavaScript
  * @description
  * @create 2014-09-21
- * @update 2014-09-28
+ * @update 2014-12-14
  */
 
 var CArray = function (numElements) {
@@ -13,6 +13,7 @@ var CArray = function (numElements) {
   this.dataStore = [];
   this.pos = 0;
   this.numElements = numElements;
+  this.gaps = [5, 3, 1];
 
   for (var i = 0 ; i < numElements; ++i) {
     this.dataStore[i] = i;
@@ -40,9 +41,14 @@ CArray.prototype.clear = function () {
     }
 };
 
-CArray.prototype.setData = function () {
-    for (var i = 0; i < this.numElements; ++i) {
-        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1) * 5);
+CArray.prototype.setData = function (arr) {
+
+    if (typeof arr === 'undefined') {
+        for (var i = 0; i < this.numElements; ++i) {
+            this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1) * 5);
+        }
+    } else {
+        this.dataStore = arr;
     }
 };
 
@@ -58,6 +64,10 @@ CArray.prototype.cost = function (fn) {
   console.log(fn);
 
   console.log('Time cost: ' + (new Date() - startTime) + 'ms\n');
+};
+
+CArray.prototype.getGaps = function (arr) {
+  this.gaps = arr;
 };
 
 module.exports = CArray;
