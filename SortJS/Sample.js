@@ -9,26 +9,22 @@
  */
 
 var CArray = require('./CArray');
-var arr = new CArray(1000);
 
 // Require different sort methods
 // -------------------------------
 // Insertion
-arr.setData();
 var InsertionSort = require('./InsertionSort');
-arr.cost(InsertionSort(arr));
+CArray.cost(InsertionSort);
 
 // Selection
-arr.setData();
 var SelectionSort = require('./SelectionSort');
-arr.cost(SelectionSort(arr));
+CArray.cost(SelectionSort);
 
 // Bubble
-arr.setData();
 var BubbleSort = require('./BubbleSort');
-arr.cost(BubbleSort(arr));
+CArray.cost(BubbleSort);
 
 // Shell
-arr.setData();
 var ShellSort = require('./ShellSort');
-arr.cost(ShellSort(arr));
+CArray.cost(ShellSort.staticShellSort);
+CArray.cost(ShellSort.dynamicShellSort);
