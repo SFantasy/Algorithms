@@ -58,16 +58,21 @@ CArray.prototype.swap = function (arr, index1, index2) {
     arr[index2] = temp;
 };
 
-CArray.prototype.cost = function (fn) {
-  var startTime = new Date();
-
-  console.log(fn);
-
-  console.log('Time cost: ' + (new Date() - startTime) + 'ms\n');
-};
 
 CArray.prototype.getGaps = function (arr) {
   this.gaps = arr;
 };
 
-module.exports = CArray;
+
+exports.cost = function (fn) {
+  var arr = new CArray(100000);
+  arr.setData();
+
+  var startTime = new Date();
+
+  fn(arr);
+
+  console.log('Time cost: ' + (new Date() - startTime) + 'ms\n');
+};
+
+exports.CArray = CArray;
