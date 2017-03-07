@@ -12,7 +12,6 @@ var findWords = function(words) {
 
     return words.filter(word => {
       let wordLower = word.toLowerCase();
-      let flag = true;
       let row = 0;
       
       ROWS.some((ROW, index) => {
