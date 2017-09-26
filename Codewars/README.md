@@ -1,4 +1,4 @@
 Codewars
 ---
 
-My solutions for katas on [codewars.com](http://www.codewars.com/)
+My solutions for katas on [codewars.com](https://www.codewars.com/)

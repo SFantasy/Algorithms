@@ -1,9 +1,14 @@
-Algorithms
-==========
+# Algorithms
 
 Keep learning :)
 
 ## Contents
+
+### [LeetCode](LeetCode/)
+
+[leetcode.com](http://leetcode.com)
+
+### [Codewars](Codewars/)
 
 ### Sort
 
@@ -32,10 +37,6 @@ Keep learning :)
     - [ ] Counting sort
     - [ ] Bucket sort
     - [ ] Radix sort
-
-### [LeetCode](LeetCode)
-
-[leetcode.com](http://leetcode.com)
 
 ## License
 
