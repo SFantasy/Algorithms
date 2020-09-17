@@ -1,14 +1,16 @@
 /**
+ * 比较暴力的遍历，O(n^2)
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    var result = [];
+    let result = [];
 
-    for (var i = 0; i < nums.length; i++) {
-        for (var j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j]== target) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
                 result = [i, j];
                 break;
             }
